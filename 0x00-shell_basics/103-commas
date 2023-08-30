@@ -1,2 +1,2 @@
 #!/bin/bash
-(ls -A1p | grep '/$' && ls -A1p | grep -v '/$' | sort -k1,1 -g -k2) | sed ':a;N;$!ba;s/\n/,/g'
+ls -A -1 --group-directories-first --indicator-style=slash | paste -sd, - | sed 's/,/\n,/g'
