@@ -1,0 +1,2 @@
+#!/bin/bash
+(ls -A1p | grep '/$' && ls -A1p | grep -v '/$' | sort -k1,1 -g -k2) | sed ':a;N;$!ba;s/\n/,/g'
