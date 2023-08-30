@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A -1 --group-directories-first --indicator-style=slash | paste -sd, - | sed 's/,/\n,/g'
+ls -a | sort -t . -n -r | uniq | sed 's/ /\,/g' | echo
