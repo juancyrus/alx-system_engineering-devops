@@ -1,0 +1,35 @@
+What Happens When You Type “https://www.google.com” in Your Browser and Press Enter?
+When we type a website address like https://www.google.com into our browser and hit Enter, a fascinating sequence of events occurs behind the scenes. Let’s dive into the details of what happens during this process, covering various components of the web stack:
+
+1. DNS Request (Domain Name System):
+The journey begins with the browser breaking down the URL into pieces.
+The browser first looks at the domain name part: google.com.
+It needs to find the corresponding IP address for this domain.
+It sends a DNS request to DNS servers (like an internet phonebook) to resolve the domain name into an IP address.
+The DNS server responds with the exact IP address of the server that google.com points to.
+2. TCP/IP (Transmission Control Protocol / Internet Protocol):
+Armed with the IP address, your computer establishes a connection with the server using the TCP/IP protocol.
+TCP ensures reliable data transmission by breaking data into packets, numbering them, and reassembling them at the destination.
+IP handles routing and addressing, ensuring data reaches the correct server.
+3. Firewall:
+Before reaching the server, your request passes through any firewalls or security measures.
+Firewalls filter incoming and outgoing traffic to protect against unauthorized access.
+4. HTTPS/SSL (Hypertext Transfer Protocol Secure / Secure Sockets Layer):
+If the website uses HTTPS, your browser initiates a secure connection.
+It performs a TLS/SSL handshake with the server to establish an encrypted channel.
+This ensures that data exchanged between your browser and the server remains confidential and secure.
+5. Load Balancer:
+For popular websites like Google, there are multiple servers handling requests.
+A load balancer distributes incoming requests across these servers to maintain performance and prevent overload.
+6. Web Server:
+The request reaches the web server (in Google’s case, one of many).
+The web server processes the request, retrieves the requested webpage, and sends it back to your browser.
+7. Application Server:
+Some websites have an application server that processes dynamic content (e.g., search results, personalized recommendations).
+The application server generates the dynamic parts of the webpage.
+8. Database:
+If the webpage requires data from a database (e.g., search queries, user profiles), the application server queries the database.
+The database retrieves the necessary information.
+Conclusion:
+Finally, your browser receives the webpage content, renders it, and displays it on your screen.
+All these steps happen in a matter of seconds, allowing you to access the Google website seamlessly.
